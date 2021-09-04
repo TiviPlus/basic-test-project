@@ -21,6 +21,7 @@ obj
 	appearance_flags = PLANE_MASTER
 	icon = 'icons/turfs.dmi'
 	icon_state = "white"
+	screen_loc = "CENTER"
 
 /obj/planemaster/world
 	plane = 3
@@ -29,6 +30,7 @@ obj
 /obj/planemaster/lighting
 	plane = 4
 	render_target = "*lighting"
+	blend_mode = BLEND_MULTIPLY
 
 /obj/planemaster/all
 	plane = 5

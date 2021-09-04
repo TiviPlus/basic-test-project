@@ -13,6 +13,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
+#include "map\test.dmm"
 #include "map\testmap.dmm"
 #include "src\basic-test-project.dm"
 #include "src\mob.dm"
