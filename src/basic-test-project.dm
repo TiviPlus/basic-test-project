@@ -16,3 +16,31 @@ mob
 
 obj
 	step_size = 8
+
+/client
+	var/counterleft = 0
+	var/counterright = 0
+
+/client/MouseDown(object, location, control, params)
+	. = ..()
+	var/list/modifiers = params2list(params)
+	world << "down start"
+	if(modifiers["right"])
+		counterright++
+		world << "right: down"
+	if(modifiers["left"])
+		counterleft++
+		world << "left: down"
+	world << "down end"
+
+/client/MouseUp(object, location, control, params)
+	. = ..()
+	var/list/modifiers = params2list(params)
+	world << "up start"
+	if(modifiers["right"])
+		counterright--
+		world << "right: up [counterright]"
+	if(modifiers["left"])
+		counterleft--
+		world << "left: up, [counterleft]"
+	world << "up end"

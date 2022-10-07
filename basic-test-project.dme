@@ -18,5 +18,6 @@
 #include "src\basic-test-project.dm"
 #include "src\mob.dm"
 #include "src\turf.dm"
+#include "src\interface.dmf"
 // END_INCLUDE
 
