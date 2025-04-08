@@ -16,7 +16,10 @@ mob
 
 /client/Click(object, location, control, params)
 	. = ..()
-	src << winget(src, "map", "mouse-pos")
+	var/mousepos = winget(src, "map", "mouse-pos")
+	var/iconsize = winget(src, "map", "icon-size")
+	var/size = winget(src, "map", "size")
+	src << "Click: " + size + " " + mousepos + " " + iconsize
 
 obj
 	step_size = 8
