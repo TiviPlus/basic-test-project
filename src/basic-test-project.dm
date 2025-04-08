@@ -14,5 +14,9 @@
 mob
 	step_size = 8
 
+/client/Click(object, location, control, params)
+	. = ..()
+	src << winget(src, "map", "mouse-pos")
+
 obj
 	step_size = 8
